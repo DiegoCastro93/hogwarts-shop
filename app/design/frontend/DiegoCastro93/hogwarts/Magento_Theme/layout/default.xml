@@ -3,8 +3,8 @@
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
-                <argument name="logo_width" xsi:type="number">200</argument>
-                <argument name="logo_height" xsi:type="number">200</argument>
+                <argument name="logo_width" xsi:type="number">100</argument>
+                <argument name="logo_height" xsi:type="number">100</argument>
                 <argument name="logo_alt" xsi:type="string">Logo Hogwarts Shop</argument>
             </arguments>
         </referenceBlock>
