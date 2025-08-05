@@ -1,7 +1,31 @@
-body {
-    font-family: 'Cinzel', serif;
-    font-size: 16px;
-    line-height: 1.6;
-    background-color: #f4f1e8;
-    color: #2a1b0f;   
+/**
+ * Common
+ */
+& when (@media-common = true) {
+    body {
+        font-family: 'Cinzel', serif;
+        font-size: 16px;
+        line-height: 1.6;
+        background-color: #f4f1e8;
+        color: #2a1b0f;   
+    }
+}
+
+/**
+ * Desktop
+ */
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .navigation {
+        text-align: center;
+
+        .ui-menu {
+            display: inline-block;
+            float: none;
+        }
+
+        .level0 {
+            float: none;
+            display: inline-block;
+        }
+    }
 }
