@@ -9,7 +9,9 @@
                 <argument name="logo_alt" xsi:type="string">Logo Hogwarts Shop</argument>
             </arguments>
         </referenceBlock>
-        <!-- Remove report.bugs blocks -->
+        <!-- Remove report.bugs, advanced-search-link, currency blocks -->
         <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true" />
+        <referenceBlock name="currency" remove="true" />
     </body>
 </page>
