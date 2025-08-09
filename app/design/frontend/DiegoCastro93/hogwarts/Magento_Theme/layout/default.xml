@@ -13,5 +13,12 @@
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="advanced-search-link" remove="true" />
         <referenceBlock name="currency" remove="true" />
+        <!-- Create a new container for the minicart and search -->
+        <referenceContainer name="header.panel">
+            <container name="cartsearch.parent.container" htmlTag="div" htmlClass="cartsearch-parent" after="logo"/>
+        </referenceContainer>
+        <!-- Move minicart and search into the new container -->
+        <move element="minicart" destination="cartsearch.parent.container"/>
+        <move element="top.search" destination="cartsearch.parent.container"/>
     </body>
 </page>
