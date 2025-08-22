@@ -9,10 +9,15 @@
                 <argument name="logo_alt" xsi:type="string">Logo Hogwarts Shop</argument>
             </arguments>
         </referenceBlock>
-        <!-- Remove report.bugs, advanced-search-link, currency blocks -->
+        <!-- Add custom.header.links block inside header.panel -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Customer\Block\Account\Customer" name="custom.header.links" template="Magento_Customer::account/header-links.phtml" after="-"/>
+        </referenceContainer>
+        <!-- Remove report.bugs, advanced-search-link, currency, top.links blocks -->
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceBlock name="advanced-search-link" remove="true" />
         <referenceBlock name="currency" remove="true" />
+        <referenceBlock name="top.links" remove="true" />
         <!-- Move logo, search, minicart -->
         <move element="logo" destination="header.panel" before="-"/>
         <move element="top.search" destination="header.panel" after="logo"/>

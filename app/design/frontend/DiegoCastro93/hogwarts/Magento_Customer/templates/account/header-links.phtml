@@ -1,0 +1,33 @@
+<?php
+/** @var $block \Magento\Customer\Block\Account\Customer */
+?>
+<ul class="header links">
+    <?php if ($block->customerLoggedIn()): ?>
+        <li>
+            <a href="<?= $block->getUrl('customer/account') ?>">
+                <?= $block->escapeHtml(__('My Account')) ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= $block->getUrl('wishlist') ?>">
+                <?= $block->escapeHtml(__('My Wish List')) ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= $block->getUrl('customer/account/logout') ?>">
+                <?= $block->escapeHtml(__('Sign Out')) ?>
+            </a>
+        </li>
+    <?php else: ?>
+        <li>
+            <a href="<?= $block->getUrl('customer/account/login') ?>">
+                <?= $block->escapeHtml(__('Sign In')) ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?= $block->getUrl('customer/account/create') ?>">
+                <?= $block->escapeHtml(__('Create an Account')) ?>
+            </a>
+        </li>
+    <?php endif; ?>
+</ul>
