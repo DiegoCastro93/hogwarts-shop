@@ -4,13 +4,17 @@
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.svg</argument>
-                <argument name="logo_width" xsi:type="number">100</argument>
-                <argument name="logo_height" xsi:type="number">100</argument>
+                <argument name="logo_width" xsi:type="number">75</argument>
+                <argument name="logo_height" xsi:type="number">75</argument>
                 <argument name="logo_alt" xsi:type="string">Logo Hogwarts Shop</argument>
             </arguments>
         </referenceBlock>
-        <!-- Add custom.header.links block inside header.panel -->
+        <!-- Add header.actions container inside header.panel -->
         <referenceContainer name="header.panel">
+            <container name="header.actions" htmlTag="div" htmlClass="header-actions" after="-" />
+        </referenceContainer>
+        <!-- Add custom.header.links block inside header.actions -->
+        <referenceContainer name="header.actions">
             <block class="Magento\Customer\Block\Account\Customer" name="custom.header.links" template="Magento_Customer::account/header-links.phtml" after="-"/>
         </referenceContainer>
         <!-- Remove report.bugs, advanced-search-link, currency, top.links blocks -->
@@ -21,6 +25,6 @@
         <!-- Move logo, search, minicart -->
         <move element="logo" destination="header.panel" before="-"/>
         <move element="top.search" destination="header.panel" after="logo"/>
-        <move element="minicart" destination="header.panel" after="top.search"/>
+        <move element="minicart" destination="header.actions" before="-"/>
     </body>
 </page>
