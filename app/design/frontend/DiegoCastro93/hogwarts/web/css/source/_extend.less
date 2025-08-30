@@ -33,6 +33,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        justify-content: space-between;
 
         .block.block-search,
         .minicart-wrapper,
@@ -42,18 +43,25 @@
 
         .logo {
             margin: 0;
+            flex: 0 0 auto;
         }
 
         .block.block-search {
-            flex: 1;
+            flex: 1 1 auto;
+            max-width: 600px;
+            margin: 0 auto;
             
             .control {
                 padding: 0;
             }
+
+            input {
+                border-radius: 20px;
+            }
         }
 
         .header-actions {
-            margin-left: auto;
+            flex: 0 0 auto;
             display: flex;
             align-items: center;
             gap: 15px;
@@ -65,8 +73,18 @@
                 .dropdown-toggle {
                     background: none;
                     border: none;
-                    font-weight: bold;
-                    cursor: pointer;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 5px 10px;
+
+                    img {
+                        width: 50px;
+                    }
+
+                    span {
+                        margin-left: -5px;
+                    }
                 }
 
                 .dropdown-menu {
