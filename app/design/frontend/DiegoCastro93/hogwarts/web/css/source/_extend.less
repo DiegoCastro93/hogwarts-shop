@@ -84,10 +84,12 @@
                 .dropdown-toggle {
                     background: none;
                     border: none;
+                    outline: none;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     padding: 5px 10px;
+                    cursor: pointer;
 
                     img {
                         width: 50px;
@@ -97,17 +99,24 @@
                         margin-left: -5px;
                         color: #fff;
                     }
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
                 }
 
                 .dropdown-menu {
                     display: none;
                     position: absolute;
+                    top: 100%;
+                    right: 0;
                     background: #fff;
                     border: 1px solid #ddd;
                     min-width: 160px;
                     list-style: none;
-                    padding: 5px 0;
                     margin: 0;
+                    padding: 5px 0;
                     z-index: 1000;
 
                     li {
@@ -125,7 +134,7 @@
                     }
                 }
 
-                &:hover .dropdown-menu {
+                &.active .dropdown-menu {
                     display: block;
                 }
             }
